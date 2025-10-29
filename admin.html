@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin • Toji Motion</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    main { padding: 32px 0 60px; }
+    .gate, .panel { max-width: 780px; margin: 0 auto; }
+    .card form { display: grid; gap: 12px; }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    label { font-weight: 700; font-size: 13px; }
+    input[type="text"], input[type="password"], input[type="file"], input[type="url"] {
+      width: 100%; padding: 12px 12px; border-radius: 10px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: color-mix(in oklab, var(--bg-soft) 85%, transparent);
+      color: var(--text);
+    }
+    input::placeholder { color: #8896a3; }
+    .hint { color: var(--muted); font-size: 12px; }
+    .status { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; white-space: pre-wrap; color: #bff4ff; }
+    .pill.warn { background: rgba(250,204,21,.1); border-color: rgba(250,204,21,.35); color: #fde68a; }
+    .muted small { font-size: 12px; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="app-icon" aria-hidden="true">TM</div>
+        <div class="brand-text">
+          <h1>Toji Motion Admin</h1>
+          <p class="muted">Private upload panel</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="gate section">
+      <div class="card">
+        <h3>Access</h3>
+        <p class="muted">This page is client-side only. Use your personal passcode to reveal the uploader. Do not share your passcode.</p>
+        <div class="row">
+          <div>
+            <label for="pass">Passcode</label>
+            <input id="pass" type="password" placeholder="Enter your admin passcode" />
+          </div>
+          <div style="display:flex;align-items:end;gap:8px;">
+            <button id="unlock" class="btn-primary" style="width: 100%;"><span class="btn-label">Unlock</span></button>
+          </div>
+        </div>
+        <p class="hint">Tip: Set a strong passcode and bookmark this page. The passcode is checked locally; it only hides the form. Real security comes from your GitHub token used below.</p>
+      </div>
+    </section>
+
+    <section class="panel section" hidden>
+      <div class="cards">
+        <div class="card">
+          <h3>GitHub upload</h3>
+          <p class="muted">Uploads your APK to your GitHub repository using a temporary Personal Access Token (classic or fine-grained). The token is used only in your browser and is not stored.</p>
+
+          <div class="pill warn" style="display:inline-block;margin:6px 0;">Never reuse tokens. Create a short-lived token with minimum repo:contents permissions.</div>
+
+          <form id="uploadForm">
+            <div class="row">
+              <div>
+                <label for="owner">Owner</label>
+                <input id="owner" type="text" placeholder="your-github-username-or-org" required />
+              </div>
+              <div>
+                <label for="repo">Repo</label>
+                <input id="repo" type="text" placeholder="your-repo" required />
+              </div>
+            </div>
+            <div class="row">
+              <div>
+                <label for="branch">Branch</label>
+                <input id="branch" type="text" value="main" required />
+              </div>
+              <div>
+                <label for="path">Path in repo</label>
+                <input id="path" type="text" value="assets/your-app.apk" required />
+              </div>
+            </div>
+            <div>
+              <label for="token">GitHub Token</label>
+              <input id="token" type="password" placeholder="Paste a temporary token with repo contents: write" required />
+              <p class="hint">Permissions needed: repo (contents: read/write) or fine-grained: contents read/write for this repo.</p>
+            </div>
+            <div>
+              <label for="appFile">App File (APK or IPA)</label>
+              <input type="file" id="appFile" accept=".apk,.ipa" />
+              <p class="hint">Upload the latest APK (Android) or IPA (iOS) file</p>
+            </div>
+            <div>
+              <label for="appType">App Type</label>
+              <select id="appType" class="form-control">
+                <option value="android">Android (APK)</option>
+                <option value="ios">iOS (IPA)</option>
+              </select>
+              <p class="hint">Select the platform for this app file</p>
+            </div>
+            <div class="row">
+              <div>
+                <label for="version">Version label</label>
+                <input id="version" type="text" placeholder="v1.0.1" />
+              </div>
+              <div style="display:flex;align-items:end;gap:8px;">
+                <button class="btn-secondary" id="hashBtn" type="button">Compute SHA-256</button>
+                <button class="btn-primary" type="submit"><span class="btn-label">Upload</span></button>
+              </div>
+            </div>
+            <div id="hashOut" class="hint" style="margin-top:6px;"></div>
+            <div id="status" class="status" style="margin-top:10px;"></div>
+          </form>
+        </div>
+
+        <div class="card">
+          <h3>After upload</h3>
+          <ul class="list">
+            <li>Update the <code>VERSION</code> in <code>app.js</code> to match your new release.</li>
+            <li>Visit your GitHub Pages URL and verify the size, updated time, and hash.</li>
+            <li>Optionally, tag a release in GitHub and link to it from the site.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
