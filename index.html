@@ -198,6 +198,34 @@
     </div>
   </footer>
 
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+  
+  <script>
+    // Your Firebase configuration
+    const firebaseConfig = {
+      databaseURL: "https://tojimotion-default-rtdb.firebaseio.com/"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  
+  <section id="comments" class="container section">
+    <h3>Comments</h3>
+    <div class="card" style="max-width: 800px; margin: 0 auto;">
+      <div id="comment-form">
+        <textarea id="comment-text" placeholder="Share your thoughts..." rows="3" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 8px; border: 1px solid var(--glass-border); background: var(--card); color: var(--text);"></textarea>
+        <button id="submit-comment" class="btn-secondary">Post Comment</button>
+      </div>
+      <div id="comments-list" style="margin-top: 20px;">
+        <!-- Comments will be loaded here -->
+      </div>
+    </div>
+  </section>
+
   <script src="app.js"></script>
+  <script src="comments.js"></script>
 </body>
 </html>
