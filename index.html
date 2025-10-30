@@ -214,12 +214,42 @@
   
   <section id="comments" class="container section">
     <h3>Comments</h3>
-    <div class="card" style="max-width: 800px; margin: 0 auto;">
-      <div id="comment-form">
-        <textarea id="comment-text" placeholder="Share your thoughts..." rows="3" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 8px; border: 1px solid var(--glass-border); background: var(--card); color: var(--text);"></textarea>
-        <button id="submit-comment" class="btn-secondary">Post Comment</button>
+    <div class="card" style="max-width: 800px; margin: 0 auto; padding: 20px;">
+      <div id="comment-form" style="margin-bottom: 30px;">
+        <div style="display: flex; gap: 10px; margin-bottom: 15px; align-items: center;">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--brand); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">A</div>
+          <span style="font-weight: 500;">Anonymous User</span>
+        </div>
+        <textarea 
+          id="comment-text" 
+          placeholder="Share your thoughts..." 
+          rows="3" 
+          style="
+            width: 100%; 
+            padding: 12px; 
+            margin-bottom: 10px; 
+            border-radius: 12px; 
+            border: 1px solid var(--glass-border); 
+            background: var(--bg-soft); 
+            color: var(--text);
+            font-family: inherit;
+            font-size: 15px;
+            resize: vertical;
+            min-height: 100px;
+            transition: border-color 0.2s;
+          "
+        ></textarea>
+        <div style="display: flex; justify-content: flex-end;">
+          <button id="submit-comment" class="btn-primary" style="display: flex; align-items: center; gap: 8px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+            Post Comment
+          </button>
+        </div>
       </div>
-      <div id="comments-list" style="margin-top: 20px;">
+      <div id="comments-list" style="border-top: 1px solid var(--glass-border); padding-top: 20px;">
         <!-- Comments will be loaded here -->
       </div>
     </div>
