@@ -1,0 +1,32 @@
+name: Release APK
+
+on:
+  push:
+    tags:
+      - 'v*'  # Trigger on version tags (e.g., v1.0.0)
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Needed for tags
+      
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v2
+      
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v3
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: ./releases/TojiMotion-${{ github.ref_name }}.apk
+          asset_name: TojiMotion-${{ github.ref_name }}.apk
+          asset_content_type: application/vnd.android.package-archive

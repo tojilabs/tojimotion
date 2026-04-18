@@ -1,0 +1,23 @@
+# Secure uploads directory
+<FilesMatch "\.(php|php\.|php3|php4|php5|phtml|pl|cgi|py|jsp|asp|htm|shtml|sh|cgi)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Disable directory listing
+Options -Indexes
+
+# Protect against XSS and other attacks
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Enable CORS for necessary files
+<FilesMatch "\.(js|css|apk)$">
+    <IfModule mod_headers.c>
+        Header set Access-Control-Allow-Origin "*"
+    </IfModule>
+</FilesMatch>
