@@ -184,7 +184,7 @@ body {
   .header-actions { gap: 3px; }
   .btn-ghost { padding: 5px 8px; font-size: 12px; }
   .actions { flex-direction: column; width: 100%; }
-  .btn-primary, .btn-secondary { width: 100%; padding: 10px 14px; font-size: 14px; }
+  .btn-primary, .btn-secondary { width: 100%; padding: 10px 14px; font-size: 14px; color: #000 !important; }
   .hero { padding: 20px 0 16px; }
   .section { padding: 20px 0; }
   .section h3 { font-size: 16px; }
@@ -196,7 +196,8 @@ body {
   .brand-text h1 { font-size: 13px; }
   .brand-text .muted { font-size: 8px; }
   .header-actions { gap: 2px; }
-  .btn-ghost { padding: 4px 6px; font-size: 11px; }
+  .btn-ghost { padding: 4px 6px; font-size: 11px; color: #000 !important; }
+  .btn-primary, .btn-secondary { color: #000 !important; }
   .hero { padding: 16px 0 12px; }
   .headline { font-size: clamp(18px, 4.5vw, 24px); }
   .subhead { font-size: 13px; }
