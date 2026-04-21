@@ -163,6 +163,33 @@ body {
   .cards { grid-template-columns: 1fr; }
 }
 
+@media (max-width: 768px) {
+  .container { width: min(100%, 94%); padding: 0 16px; }
+  .header-inner { padding: 12px 0; }
+  .logo-img { width: 40px; height: 40px; }
+  .brand-text h1 { font-size: 16px; }
+  .brand-text .muted { font-size: 11px; }
+  .header-actions { gap: 6px; }
+  .btn-ghost { padding: 8px 12px; font-size: 14px; }
+  .hero { padding: 32px 0 24px; }
+  .headline { font-size: clamp(24px, 6vw, 36px); }
+  .section { padding: 32px 0; }
+}
+
+@media (max-width: 600px) {
+  .container { width: 100%; padding: 0 12px; }
+  .logo-img { width: 36px; height: 36px; }
+  .brand-text h1 { font-size: 15px; }
+  .brand-text .muted { font-size: 10px; }
+  .header-actions { gap: 4px; }
+  .btn-ghost { padding: 6px 10px; font-size: 13px; }
+  .actions { flex-direction: column; width: 100%; }
+  .btn-primary, .btn-secondary { width: 100%; }
+  .hero { padding: 24px 0 20px; }
+  .section { padding: 24px 0; }
+  .section h3 { font-size: 18px; }
+}
+
 /* Aspect Ratio Utilities */
 .aspect-9-16 { aspect-ratio: 9/16; }
 .aspect-16-9 { aspect-ratio: 16/9; }
@@ -185,6 +212,22 @@ body {
 .product-card h4 { margin: 0 0 8px; font-size: 20px; }
 .product-card p { color: var(--muted); margin: 0 0 16px; font-size: 14px; line-height: 1.5; }
 
+@media (max-width: 768px) {
+  .products-grid { grid-template-columns: 1fr; gap: 16px; }
+  .product-card { padding: 20px; }
+  .product-icon { width: 64px; height: 64px; }
+  .product-card h4 { font-size: 18px; }
+  .product-card p { font-size: 13px; }
+}
+
+@media (max-width: 480px) {
+  .products-grid { gap: 12px; }
+  .product-card { padding: 16px; }
+  .product-icon { width: 56px; height: 56px; }
+  .product-card h4 { font-size: 16px; }
+  .product-card p { font-size: 12px; }
+}
+
 /* Contact Card */
 .contact-card { position: relative; border-radius: 16px; padding: 32px; box-shadow: var(--shadow);
   background:
@@ -197,8 +240,12 @@ body {
 }
 .contact-card p { color: var(--muted); margin: 0 0 20px; font-size: 16px; }
 
-@media (max-width: 600px) {
-  .actions { flex-direction: column; }
-  .btn-primary, .btn-secondary { width: 100%; }
-  .products-grid { grid-template-columns: 1fr; }
+@media (max-width: 768px) {
+  .contact-card { padding: 24px; }
+  .contact-card p { font-size: 14px; }
+}
+
+@media (max-width: 480px) {
+  .contact-card { padding: 20px; }
+  .contact-card p { font-size: 13px; }
 }
