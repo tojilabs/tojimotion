@@ -1,55 +1,21 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="Content-Security-Policy" content="
-    default-src 'self' https:;
-    connect-src 'self' https: wss: *.firebaseio.com *.firebase.com *.firebasedatabase.app wss://*.firebaseio.com wss://*.firebase.com;
-    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.gstatic.com https://*.firebaseio.com https://*.firebase.com https://*.firebasedatabase.app https://*.googleapis.com;
-    style-src 'self' 'unsafe-inline' https:;
-    img-src 'self' data: https:;
-    font-src 'self' data: https:;
-    frame-src 'self' https:;
-    worker-src 'self' blob:;
-  ">
-  <title>Toji Labs • Innovative Products</title>
+  <title>Toji Labs &bull; Innovative Products</title>
   <meta name="description" content="Toji Labs - Creating innovative mobile applications. Download Toji Motion and Toji Preset." />
-  <meta property="og:title" content="Toji Labs • Innovative Products" />
+  <meta property="og:title" content="Toji Labs &bull; Innovative Products" />
   <meta property="og:description" content="Discover Toji Labs' innovative mobile applications." />
   <meta property="og:type" content="website" />
-  <!-- 
-    Theme color meta tags for browser theming support.
-    Note: Some browsers like Firefox and Opera don't support theme-color meta tags,
-    but we include them for browsers that do (Chrome, Edge, Samsung Internet, etc.)
-    
-    The following tags are intentionally included despite browser warnings:
-    - theme-color: Supported by Chrome, Edge, Samsung Internet
-    - msapplication-navbutton-color: For Windows Phone/Edge
-    - apple-mobile-web-app-*: For iOS Safari
-  -->
-  <!--[if !IE]><!-->
-  <meta name="theme-color" content="#A9FB00" id="themeColor">
-  <meta name="theme-color" content="#A9FB00" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
-  <!--<![endif]-->
-  
-  <!-- Windows Phone / Edge -->
-  <meta name="msapplication-navbutton-color" content="#A9FB00">
-  
-  <!-- iOS Safari -->
+
+  <meta name="theme-color" content="#0d0d0f" id="themeColor">
+  <meta name="theme-color" content="#0d0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f2f3f7" media="(prefers-color-scheme: light)">
+  <meta name="msapplication-navbutton-color" content="#0d0d0f">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  
-  <!-- Fallback for browsers that don't support media queries in theme-color -->
-  <script>
-    // This script provides a fallback for browsers that don't support media queries in theme-color
-    // but do support the theme-color meta tag (like older Chrome/Edge versions)
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.getElementById('themeColor')?.setAttribute('content', '#1a1a1a');
-    }
-  </script>
-  
+
   <meta http-equiv="Content-Security-Policy" content="
     default-src 'self' https: blob: data:;
     script-src 'self' 'unsafe-inline' 'unsafe-eval' https: blob:;
@@ -62,14 +28,16 @@
     worker-src 'self' blob:;
     upgrade-insecure-requests;
   " />
+
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23A9FB00'/><path d='M26 54c0-13 10-23 23-23s23 10 23 23-10 23-23 23c-5 0-9-2-13-4' stroke='white' stroke-width='10' fill='none' stroke-linecap='round'/></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
-  
 </head>
 <body>
+  <div id="scrollProgress"></div>
+
   <div class="bg-effects">
     <div class="blob blob-1"></div>
     <div class="blob blob-2"></div>
@@ -78,25 +46,25 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <div class="brand">
+      <a class="brand" href="#">
         <img src="Project 1292 Copy [4A988C4].png" alt="Toji Labs Logo" class="logo-img">
         <div class="brand-text">
           <h1>Toji Labs</h1>
           <p class="muted">Innovative Mobile Solutions</p>
         </div>
-      </div>
-      <div class="header-actions">
-        <button id="themeToggle" class="btn-ghost" aria-label="Toggle theme">🌙</button>
+      </a>
+      <nav class="header-actions">
+        <button id="themeToggle" class="btn-ghost" aria-label="Toggle theme"></button>
         <a class="btn-ghost" href="#products">Products</a>
         <a class="btn-ghost" href="#about">About</a>
         <a class="btn-ghost" href="#contact">Contact</a>
-      </div>
+      </nav>
     </div>
   </header>
 
   <main>
     <section class="hero container">
-      <div class="hero-text">
+      <div class="hero-text reveal">
         <h2 class="headline">Innovative Mobile Applications</h2>
         <p class="subhead">Discover our cutting-edge mobile solutions designed for performance and user experience.</p>
         <div class="actions">
@@ -104,38 +72,87 @@
           <a class="btn-secondary" href="#about">Learn More</a>
         </div>
       </div>
+      <div class="hero-visual reveal reveal-delay-1">
+        <div class="device">
+          <div class="device-glow"></div>
+          <img src="Project 119 [107ADAC].png" alt="Toji Motion App Preview">
+        </div>
+      </div>
     </section>
 
     <section id="products" class="container section">
-      <h3>Our Products</h3>
+      <div class="section-header reveal">
+        <h3>Our Products</h3>
+        <p>Handcrafted apps built for performance and clarity</p>
+      </div>
       <div class="products-grid">
-        <div class="product-card">
+        <div class="product-card reveal reveal-delay-1">
           <img src="photo_2025-10-30_12-57-09.jpg" alt="Toji Motion Icon" class="product-icon">
           <h4>Toji Motion</h4>
+          <div class="product-badges">
+            <span class="product-badge">
+              <svg viewBox="0 0 24 24"><path d="M17 1H7a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm0 17H7V6h10v12z"/></svg>
+              Android
+            </span>
+            <span class="product-badge">v1.0.0</span>
+            <span class="product-badge">Free</span>
+          </div>
           <p>Track, create, and move fast with a minimal UI. Crafted for performance and clarity.</p>
-          <a href="https://www.mediafire.com/file/raxa0pdp43uuh6r/Toji_Motion_25_Feb.apk/file" class="btn-primary" target="_blank" rel="noopener">
+          <a href="https://www.mediafire.com/file/raxa0pdp43uuh6r/Toji_Motion_25_Feb.apk/file" class="btn-primary btn-arrow" target="_blank" rel="noopener">
             Download APK
+            <svg viewBox="0 0 24 24"><path d="M13 5l7 7-7 7M5 12h15"/></svg>
           </a>
         </div>
-        <div class="product-card">
+        <div class="product-card reveal reveal-delay-2">
           <img src="photo_2026-04-18_12-37-22.jpg" alt="Toji Preset Icon" class="product-icon">
           <h4>Toji Preset</h4>
+          <div class="product-badges">
+            <span class="product-badge">
+              <svg viewBox="0 0 24 24"><path d="M17 1H7a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm0 17H7V6h10v12z"/></svg>
+              Android
+            </span>
+            <span class="product-badge">v1.0.0</span>
+            <span class="product-badge">Free</span>
+          </div>
           <p>Professional presets for your creative projects. Elevate your content with stunning effects.</p>
-          <a href="https://www.mediafire.com/file/t4r3zttpchbhjsb/Toji_Preset_1.0.0.apk/file" class="btn-primary" target="_blank" rel="noopener">
+          <a href="https://www.mediafire.com/file/t4r3zttpchbhjsb/Toji_Preset_1.0.0.apk/file" class="btn-primary btn-arrow" target="_blank" rel="noopener">
             Download APK
+            <svg viewBox="0 0 24 24"><path d="M13 5l7 7-7 7M5 12h15"/></svg>
           </a>
         </div>
       </div>
     </section>
 
+    <section class="container section">
+      <div class="stats-row reveal">
+        <div class="stat-item">
+          <div class="stat-value">2</div>
+          <div class="stat-label">Products Released</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-value">1M+</div>
+          <div class="stat-label">Downloads</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-value">100%</div>
+          <div class="stat-label">Free to Use</div>
+        </div>
+      </div>
+    </section>
+
     <section id="about" class="container section">
-      <h3>About Toji Labs</h3>
+      <div class="section-header reveal">
+        <h3>About Toji Labs</h3>
+        <p>What drives us and how we work</p>
+      </div>
       <div class="cards">
-        <div class="card">
+        <div class="card reveal reveal-delay-1">
           <h4>Our Mission</h4>
           <p>Toji Labs is dedicated to creating innovative mobile applications that prioritize performance, user experience, and clean design.</p>
         </div>
-        <div class="card">
+        <div class="card reveal reveal-delay-2">
           <h4>Our Approach</h4>
           <ul class="list">
             <li>Minimal, intuitive interfaces</li>
@@ -143,7 +160,7 @@
             <li>Regular updates and improvements</li>
           </ul>
         </div>
-        <div class="card">
+        <div class="card reveal reveal-delay-3">
           <h4>Security First</h4>
           <ul class="list">
             <li>Direct file downloads, no middlemen</li>
@@ -155,38 +172,47 @@
     </section>
 
     <section id="contact" class="container section">
-      <h3>Get In Touch</h3>
-      <div class="contact-card">
+      <div class="section-header reveal">
+        <h3>Get In Touch</h3>
         <p>Have questions or feedback? We'd love to hear from you.</p>
-        <a href="mailto:contact@tojilabs.com" class="btn-primary">Contact Us</a>
+      </div>
+      <div class="contact-card reveal reveal-delay-1">
+        <p>Reach out to us anytime — we'll get back to you as soon as possible.</p>
+        <a href="https://t.me/Tojimotionapp" class="btn-primary" target="_blank" rel="noopener">Contact Us</a>
       </div>
     </section>
   </main>
 
+  <button id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <span>© <span id="year"></span> Toji Labs</span>
-      <a href="mailto:contact@tojilabs.com" class="muted">Contact Us</a>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="Project 1292 Copy [4A988C4].png" alt="Toji Labs" class="logo-img">
+          <p>Toji Labs creates innovative mobile applications with a focus on performance, clean design, and user experience.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Products</h5>
+          <a href="#products">Toji Motion</a>
+          <a href="#products">Toji Preset</a>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a href="mailto:contact@tojilabs.com">Support</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year"></span> Toji Labs. All rights reserved.</span>
+        <a href="mailto:contact@tojilabs.com">contact@tojilabs.com</a>
+      </div>
     </div>
   </footer>
 
-  
-
-  
-  
-  
-  
-  
-
   <script src="app.js"></script>
-  <script>
-    function handleDownload(event) {
-      // Let the default link behavior happen
-      // This will open the GitHub releases page in a new tab
-      // and users can download the APK directly from there
-      return true;
-    }
-  </script>
-  
 </body>
 </html>
