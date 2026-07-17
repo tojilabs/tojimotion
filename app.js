@@ -92,6 +92,27 @@
   // ==========================================
 
   var appData = {
+    spidy: {
+      icon: 'photo_2026-07-17_17-35-55.jpg',
+      title: 'Spidy Motion',
+      subtitle: 'Web Slinging Animation Tool',
+      bg: 'linear-gradient(135deg, #1a0a0a 0%, #4a0a0a 50%, #1a0a2e 100%)',
+      rating: 5,
+      ratingNum: '4.9',
+      screenshots: ['photo_2026-07-17_17-35-55.jpg'],
+      desc: 'Spidy Motion brings web-slinging action and dynamic character animation to your mobile device.\n\nCreate stunning spider-themed animations with intuitive controls, real-time physics simulation, and fluid motion capture. Perfect for fans and creators who want to bring their ideas to life.\n\nFeatures include pose-to-pose animation, web-swing physics engine, dynamic camera controls, and high-frame-rate export. Every tool is designed for speed and creative freedom.',
+      info: [
+        { label: 'Category', value: 'Animation' },
+        { label: 'Size', value: '45 MB' },
+        { label: 'Compatibility', value: 'iOS 14.0+' },
+        { label: 'Version', value: '1.0.0' },
+        { label: 'Price', value: 'Free' }
+      ],
+      whatsnew: '• Web-swing physics engine\n• Pose-to-pose animation system\n• High-frame-rate export\n• Dynamic camera controls',
+      url: 'https://www.mediafire.com/file/1e2la8dvnjeqkyh/Spidy_Motion_v1.ipa/file',
+      version: '1.0.0',
+      price: 'Free'
+    },
     motion: {
       icon: 'photo_2025-10-30_12-57-09.jpg',
       title: 'Toji Motion',
