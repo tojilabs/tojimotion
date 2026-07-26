@@ -92,6 +92,36 @@
   // ==========================================
 
   var appData = {
+    aemotion: {
+      icon: 'photo_2026-07-26_12-40-32.jpg',
+      title: 'AE Motion',
+      subtitle: 'After Effects Style Animation',
+      bg: 'linear-gradient(135deg, #0a1a0a 0%, #1a3a1a 50%, #0a2a3a 100%)',
+      rating: 5,
+      ratingNum: '4.8',
+      screenshots: [
+        'photo_2026-07-26_12-41-56.jpg',
+        'photo_2026-07-26_12-42-15.jpg',
+        'photo_2026-07-26_12-42-14.jpg',
+        'photo_2026-07-26_12-42-13.jpg',
+        'photo_2026-07-26_12-42-06.jpg',
+        'photo_2026-07-26_12-42-03.jpg',
+        'photo_2026-07-26_12-42-02.jpg',
+        'photo_2026-07-26_12-42-00.jpg'
+      ],
+      desc: 'AE Motion brings professional After Effects-style animation and compositing tools to your iOS device.\n\nCreate stunning motion graphics with keyframe animation, expression-based controls, and real-time GPU rendering. Features include shape layers, text animators, null objects, and a timeline with bezier curve editing.\n\nExport in 4K with full alpha channel support. Includes built-in effects like blur, glow, color correction, and particle systems. Everything you need for professional-grade mobile motion design.',
+      info: [
+        { label: 'Category', value: 'Video & Animation' },
+        { label: 'Size', value: '85 MB' },
+        { label: 'Compatibility', value: 'iOS 15.0+' },
+        { label: 'Version', value: '2.5' },
+        { label: 'Price', value: 'Free' }
+      ],
+      whatsnew: '• Shape layer system\n• Expression-based keyframe controls\n• GPU-accelerated rendering engine\n• 4K alpha channel export',
+      url: 'https://www.mediafire.com/file/qoqryffftaox1lz/AE_Motion_2.5.ipa/file',
+      version: '2.5',
+      price: 'Free'
+    },
     spidy: {
       icon: 'photo_2026-07-17_17-35-55.jpg',
       title: 'Spidy Motion',
