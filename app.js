@@ -92,6 +92,29 @@
   // ==========================================
 
   var appData = {
+    editingviews: {
+      icon: 'photo_2026-07-28_16-49-17.jpg',
+      title: 'Editing Views',
+      subtitle: 'Video Editing Templates',
+      bg: 'linear-gradient(135deg, #0a0a1a 0%, #1a1a3a 50%, #0a1a2a 100%)',
+      rating: 5,
+      ratingNum: '4.6',
+      screenshots: [
+        'photo_2026-07-28_16-50-08.jpg'
+      ],
+      desc: 'Editing Views offers a curated collection of professional video editing templates and presets for Android.\n\nBrowse through dozens of ready-to-use templates designed for trending social media content. One-tap import into your favorite video editor.\n\nIncludes trending transition packs, text animations, color grading presets, and effect overlays. Updated weekly with new templates.',
+      info: [
+        { label: 'Category', value: 'Video & Photo Editing' },
+        { label: 'Size', value: '25 MB' },
+        { label: 'Compatibility', value: 'Android 8.0+' },
+        { label: 'Version', value: '1.0' },
+        { label: 'Price', value: 'Free' }
+      ],
+      whatsnew: '• Curated template library\n• One-tap import\n• Weekly updates\n• Trending social media presets',
+      url: 'https://www.mediafire.com/file/vr09tmm5pzs4jro/Editing_Views.apk/file',
+      version: '1.0',
+      price: 'Free'
+    },
     aemotion: {
       icon: 'photo_2026-07-26_12-40-32.jpg',
       title: 'AE Motion',
