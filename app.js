@@ -137,12 +137,12 @@
         { label: 'Category', value: 'Video & Animation' },
         { label: 'Size', value: '85 MB' },
         { label: 'Compatibility', value: 'iOS 15.0+' },
-        { label: 'Version', value: '2.5' },
+        { label: 'Version', value: '2.8' },
         { label: 'Price', value: 'Free' }
       ],
       whatsnew: '• Shape layer system\n• Expression-based keyframe controls\n• GPU-accelerated rendering engine\n• 4K alpha channel export',
-      url: 'https://www.mediafire.com/file/qoqryffftaox1lz/AE_Motion_2.5.ipa/file',
-      version: '2.5',
+      url: 'https://www.mediafire.com/file/6wdngbam5x8osaq/AE+Motion+2.8.ipa/file',
+      version: '2.8',
       price: 'Free'
     },
     spidy: {
