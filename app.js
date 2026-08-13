@@ -111,7 +111,7 @@
         { label: 'Price', value: 'Free' }
       ],
       whatsnew: '• Curated template library\n• One-tap import\n• Weekly updates\n• Trending social media presets',
-      url: 'https://www.mediafire.com/file/vr09tmm5pzs4jro/Editing_Views.apk/file',
+      url: 'https://www.mediafire.com/file/sbnpz02l6y10w80/Editing+Views_1.0.0.apk/file',
       version: '1.0',
       price: 'Free'
     },
