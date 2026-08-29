@@ -219,6 +219,38 @@
       url: 'https://www.mediafire.com/file/t4r3zttpchbhjsb/Toji_Preset_1.0.0.apk/download',
       version: '1.0.0',
       price: 'Free'
+    },
+    goldmotion: {
+      icon: 'goldmotion_icon.png',
+      title: 'Gold Motion',
+      subtitle: 'Gold Motion Graphics & Animation',
+      bg: 'linear-gradient(135deg, #3a2a0a 0%, #6b4f1a 50%, #3a2a1a 100%)',
+      rating: 5,
+      ratingNum: '4.8',
+      screenshots: [
+        'goldmotion_01.jpg',
+        'goldmotion_02.jpg',
+        'goldmotion_03.jpg',
+        'goldmotion_04.jpg',
+        'goldmotion_05.jpg',
+        'goldmotion_06.jpg',
+        'goldmotion_07.jpg',
+        'goldmotion_08.jpg',
+        'goldmotion_09.jpg',
+        'goldmotion_10.jpg'
+      ],
+      desc: 'Gold Motion is a powerful motion graphics and animation tool for Android, built for creating smooth, stylized video edits with a signature gold-toned aesthetic.\n\nCreate stunning animated titles, transitions, and visual effects with an intuitive keyframe system and real-time preview. Perfect for producing premium, eye-catching content on the go.\n\nIncludes professional video editing templates, effect overlays, and color-grading presets, all updated regularly. Everything you need for high-impact mobile motion design.',
+      info: [
+        { label: 'Category', value: 'Motion Graphics' },
+        { label: 'Size', value: '60 MB' },
+        { label: 'Compatibility', value: 'Android 6.0+' },
+        { label: 'Version', value: '6.0' },
+        { label: 'Price', value: 'Free' }
+      ],
+      whatsnew: '• Gold-toned motion templates\n• Keyframe animation system\n• Real-time preview\n• Regular content updates',
+      url: 'https://www.mediafire.com/file/utfbdxnwj9r3ax3/Gold+Motion+V6.0.apk/file',
+      version: '6.0',
+      price: 'Free'
     }
   };
 
